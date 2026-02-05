@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Diabetes Prediction</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Diabetes Prediction ✅</h1>
+    <form id="predict-form">
+      <div class="row">
+        <label>Pregnancies <input name="Pregnancies" type="number" min="0" step="1" required></label>
+        <label>Glucose <input name="Glucose" type="number" min="0" step="0.1" required></label>
+      </div>
+      <div class="row">
+        <label>BloodPressure <input name="BloodPressure" type="number" min="0" step="0.1" required></label>
+        <label>SkinThickness <input name="SkinThickness" type="number" min="0" step="0.1" required></label>
+      </div>
+      <div class="row">
+        <label>Insulin <input name="Insulin" type="number" min="0" step="0.1" required></label>
+        <label>BMI <input name="BMI" type="number" min="0" step="0.1" required></label>
+      </div>
+      <div class="row">
+        <label>DiabetesPedigreeFunction <input name="DiabetesPedigreeFunction" type="number" min="0" step="0.0001" required></label>
+        <label>Age <input name="Age" type="number" min="0" step="1" required></label>
+      </div>
+      <div class="actions">
+        <button type="submit">Predict</button>
+      </div>
+    </form>
+
+    <div id="result" class="result"></div>
+
+    <section class="visuals">
+      <h2>Model Visuals</h2>
+      <div class="images">
+        <img id="confusion" src="/static/images/confusion_matrix.png" alt="Confusion Matrix">
+        <img id="accuracy" src="/static/images/accuracy_comparison.png" alt="Accuracy Comparison">
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
